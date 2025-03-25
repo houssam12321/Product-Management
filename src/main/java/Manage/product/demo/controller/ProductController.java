@@ -39,7 +39,7 @@ public class ProductController {
     @DeleteMapping("/products/{id}")
     public String deleteProduct(@PathVariable Long id){
         productServiceImp.deleteProduct(id);
-        return "the product " + id + " is deleted";
+        return "the product with id " + id + " is deleted";
     }
     @GetMapping("/products/search")
     public List<Product> searchProducts(@RequestParam String keyword) {
